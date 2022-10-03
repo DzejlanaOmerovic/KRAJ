@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title> website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,400;1,700&family=Poppins:wght@100;200;300;400;600;700&family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class="k-header">
+        <nav>
+            <a href="index.html"> <img class="logo" src='l.png'</a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">POČETNA</a> </li>
+                    <li><a href="vrstekonja.html">VRSTE KONJA</a> </li>
+                    <li><a href="okonjima.html">O KONJIMA</a> </li>
+                    <li><a href="skolajahanja.html">ŠKOLA JAHANJA</a> </li>
+                    <li><a href="kontakt.html">KONTAKT</a> </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="SJ-text-box">
+            <h1>KAKO DO NAS ?</h1>
+        </div>
+    </section>
+
+    <!------- kontaktiraj nas ------>
+    <section class="location">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11650.292545136053!2d20.490804129799933!3d43.113484866293476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13532de079320731%3A0xadb1b8268081937b!2sKonji%C4%8Dki%20Klub%20Eldorado!5e0!3m2!1ssr!2srs!4v1661711922122!5m2!1ssr!2srs" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </section>
+
+    <section class="kont">
+        <div class="row">
+            <div class="kont-col">
+                <div>
+                    <i class="fa fa-home"></i>
+                    <span>
+                        <h5>Mur, Novi Pazar </h5>
+                        <p> Nedaleko od lukoil pumpe</p>
+                    </span>
+                </div>
+
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <span>
+                        <h5>+381 65786894 </h5>
+                        <p> Ponedeljak-Petak, od 07h do 22h</p>
+                    </span>
+                </div>
+
+                <div>
+                    <i class="fa fa-envelope-o"></i>
+                    <span>
+                        <h5> skolajahanjaAdijat@hotmail.com </h5>
+                        <p> Email za sve informacije </p>
+                    </span>
+                </div>
+            </div>
+    <!--------------------- poruka ------------>
+    <div class="kont-col1">
+
+
+        <form id="forma" name="myForm">
+            <h3>Stupite u kontakt</h3>
+
+            <div class="inputBox">
+
+                <input type="text" id="name" name="name" placeholder="Ime" onkeyup="validnoIme(this)"><br>
+                <div class="error">
+                    <p id="nameerror"></p>
+                </div>
+            </div>
+            <div class="inputBox">
+
+                <input type="text" id="name" name="name" placeholder="Prezime" onkeyup="validnoprezime(this)"><br>
+                <div class="error">
+                    <p id="nameerror"></p>
+                </div>
+            </div>
+
+            <div class="inputBox">
+
+                <input type="text" id="izraz" name="email" placeholder="Email" onkeyup="validanMejl(this)"><br>
+                <div class="error">
+                    <p id="mailerror"></p>
+                </div>
+            </div>
+
+            <div class="inputBox">
+                <textarea class="poruka" id="comment" name="text" placeholder="Poruka" onkeyup="validnaPoruka(this)"></textarea>
+            </div>
+
+            <div class="blbl">
+            <button class="stasta" onclick="proveri()"> posaljite poruku </button> 
+                </div>
+
+        </form>
+
+    </div>
+            </div>
+        </section>
+
+    <!------- FOOTER ------>
+
+    <section class="o-nama">
+        <footer class="footer">
+            <div class="row">
+                <div style="margin-top: 35px; margin-left: 10px;" class="col-prevod">
+                    <a href="kontakt.html" class="active-lang" id="srb">SRB </a>
+                    <a href="kontakte.html" class="engleski" id="eng">ENG</a>
+                </div>
+            </div>
+            <h4>  O NAMA </h4>
+
+            <div class="icons">
+                <i class="fa fa-facebook"></i>  ŠJ Adijat
+                <i class="fa fa-instagram"></i>  Adijat_SJ
+                <i class="fa fa-telegram"></i>  Škola jahanja Adijat
+                <i class="fa fa-phone-square"></i>  061-2647329
+            </div>
+            <p>Sva prava zadržava "Škola jahanja Adijat" Made with <i class="fa fa-heart-o"></i><a href="omeni.html"> by Džejlana Omerović </a>  </p>
+
+        </footer>
+    </section>
+
+    <!-------JavaScript za Menu------>
+    <script>
+        KeyboardEvent
+
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+    <!-------JavaScript za validaciju------>
+    <script src="validacija.js">
+
+    </script>
+</body>
+</html>

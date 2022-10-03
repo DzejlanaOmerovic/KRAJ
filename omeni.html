@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>o nama</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+          rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+          rel="stylesheet" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <nav class="nav">
+        <img src="digit3.jpg" style="float: right; height: 120px; width: 180px;" alt="">
+        <div> <i> <h1>DIGIT sistem</h1> </i></div>
+
+    </nav>
+
+
+    <section>
+        <h1 class="naslov">
+            >>šta sve možete pronaći kod nas<<
+        </h1>
+        <div class="text">
+            <h5>
+                <strong>
+                    <br />
+                    NAŠA FIRMA SE UZ NAŠE VISKOŠKOLOVANE I MASTER INŽINJERE USPEŠNO BAVI  "FORNTEND"-om I "BACKEND"-om.
+                </strong><br />  <br /> <b><i> Ako do sada niste upućeni u samo značenje ovih reči pročitajte detaljnije o tome u nastavku</i></b>
+                <br /> <br /> Frontend u sebi sadrži dosta tipova posla, koji se mogu razlikovati od firme do firme.
+                Veb dizajn je vrsta frontend razvoja koji se tiče dizajna sajta, koji najčešće počinje
+                dizajnom u programu Photoshop, zatim prelazi na rad u HTML-u, CSS-u, i sličnim script jezicima.
+                <br />
+                Što se tiče backend-a
+                dosta je kompleksnije nego ovako na prvu loptu, rad backend-a je kičma svake aplikacije, gde se
+                zalazi u više segmenata izrade. Ok, ne zalazi se u to kako će aplikacija izgledati i ceo njen
+                dizajn, ali, pored logike koja ’’napaja’’ aplikaciju, na polju sigurnosti i zaštite, posao retko
+                kad je završen. Uvek ima nekih tweakovanja,
+                podešavanja, updateovanja, na kraju treba zaštiti podatke od eventualnih napada i zloupotreba.
+              
+            </h5>
+        </div>
+        <div class="prva-slika"></div>
+    </section>
+    <section>
+        <div class="digitsl">
+        </div>
+    </section>
+
+    <section id="app">
+        <div class="header">
+            <h1> <i><i> u nastavku možete upoznati neke od zaposlenih u "DIGIT"sistem companiji </i></i> </h1>
+        </div>
+
+
+        <ul id="clanovi">
+                    <member v-for="mem in members"
+                            :key="mem.id"
+                            :name="mem.name"
+                            :phone="mem.phone"
+                            :email="mem.email"
+                            :image="mem.image">
+                    </member>
+        </ul>
+
+
+    </section>
+
+    <footer class="footer">
+        <h2>All Rights Reserved  &copy;  "DIGIT sistem"</h2>
+    </footer>
+</body>
+</html>
